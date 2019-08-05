@@ -7,20 +7,20 @@ import 'package:fastpay/FastPoints/ATMResponse.dart';
 import 'package:fastpay/FastPoints/StartAppResponse.dart';
 
 class ItemService {
-  final String _serviceUrl = 'janusdev.denizbank.com';
+  final String _serviceUrl = '**************************************';
 
   static String sessionId = " ";
 
   static String checksum = " ";
 
   Future<StartAppResponse> authentication() async {
-    var uri = Uri.https(_serviceUrl, "/api/auth/token");
+    var uri = Uri.https(_serviceUrl, "*******************************");
     var payload = {
       "device": {
         "make": "HUAWEI",
         "model": "HUAWEI CLT-L09",
         "os": {"family": "Android", "version": "9"},
-        "deviceCode": "14168afe85f59d7d",
+        "deviceCode": "************************",
         "hasNfc": false
       },
       "appVersion": "8.0.0",
@@ -33,9 +33,9 @@ class ItemService {
     final response = await http.post(uri,
         headers: {
           'Accept': 'application/json; charset=UTF-8',
-          'Content-Type': ' application/json; charset=UTF-8',
+          'Content-Type': ' **********************',
           'Referer': 'Splash',
-          'X-Client-Id': 'a25f0bfde4b1528d',
+          'X-Client-Id': '*******************',
           'Accept-Language': 'TR',
           'X-Is-Voice-Over-Enabled': 'false',
         },
@@ -63,15 +63,15 @@ class ItemService {
       "longitude": "29.33946132659912"
     };
 
-    var uri = Uri.https(_serviceUrl, "/api/branch-atm", parameters);
+    var uri = Uri.https(_serviceUrl, "*******************", parameters);
 
     final response = await http.get(
       uri,
       headers: {
-        'Accept': 'application/json; charset=UTF-8',
+        'Accept': '*********************',
         'Content-Type': 'application/json',
-        'Referer': 'Splash',
-        'X-Client-Id': 'a25f0bfde4b1528d',
+        '*********************',
+        'X-Client-Id': *********************,
         'Accept-Language': 'TR',
         'X-Is-Voice-Over-Enabled': 'false',
         'X-Token': sessionId,
